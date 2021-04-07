@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="291.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controllers.MainController">
+   <children>
+      <TextArea fx:id="textAreaW" layoutX="34.0" layoutY="58.0" prefHeight="200.0" prefWidth="200.0" promptText="Введите матрицу W">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="textAreaV" layoutX="436.0" layoutY="58.0" prefHeight="200.0" prefWidth="200.0" promptText="Введите матрицу V">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="clearButton" layoutX="276.0" layoutY="72.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="25.0" prefWidth="118.0" text="Очистить" />
+      <Button fx:id="calculateButton" layoutX="276.0" layoutY="221.0" mnemonicParsing="false" onAction="#calculate" prefHeight="25.0" prefWidth="118.0" text="Рассчитать" />
+      <TextField fx:id="textField" alignment="CENTER" layoutX="134.0" layoutY="15.0" prefHeight="25.0" prefWidth="402.0" promptText="Введите обучающую последовательность">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Button fx:id="exampleButton" layoutX="276.0" layoutY="112.0" mnemonicParsing="false" onAction="#showExample" prefHeight="25.0" prefWidth="118.0" text="Показать пример" />
+      <CheckBox fx:id="checkBox" layoutX="270.0" layoutY="153.0" mnemonicParsing="false" text="Сразу рассчитывать" />
+   </children>
+</AnchorPane>
