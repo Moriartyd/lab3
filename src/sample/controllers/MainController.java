@@ -18,6 +18,8 @@ public class MainController {
     @FXML
     private TextField textField;
     @FXML
+    private TextField vecDimension;
+    @FXML
     private TextArea textAreaW;
     @FXML
     private TextArea textAreaV;
@@ -47,12 +49,19 @@ public class MainController {
     @FXML
     public void showExample(ActionEvent actionEvent) {
         int k = 0;
-        while (k == 0) {
-            k = (int)(Math.random() * 6);
+        try {
+            k = Integer.parseUnsignedInt(vecDimension.getText());
+            if(k == 0) throw new NumberFormatException();
+
         }
-        textField.setText(Exampler.getVector(k));
+        catch (NumberFormatException e) {
+            k = ((int) (Math.random() * 100)) % 5 +1;
+        }
+
+        textField.setText(Exampler.getVector(k, false));
         textAreaW.setText(Exampler.getMatrix(k));
         textAreaV.setText(Exampler.getMatrix(k));
+
         if (checkBox.isSelected()) {
             calculate(actionEvent);
         }
